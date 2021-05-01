@@ -33,6 +33,5 @@ class Product(models.Model):
     class Meta:
         verbose_name_plural = 'Products'
         ordering = ('-created',) # sorted in decending order based on when it wasa created
-    
     def __str__(self):
         return self.name
