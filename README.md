@@ -1,10 +1,10 @@
 # The Web Portal
 ## This is an e-commerce website for a modern art gallery
 
-__Updates:__
-* IMS has been created with Admin page
-* HTML pages have been refactored
-* Basket app has been created
+__Latest Updates:__
+
+* add to basket is now working
+* sessions data is now added to cookies for basket
 
 
 __To do list__
