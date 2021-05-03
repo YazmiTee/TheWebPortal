@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls), 
     path('',include('store.urls',namespace='store')),# line that takes the urls from the store urls to here and links them together 
+    path('basket/',include('basket.urls', namespace='basket')), # link to basket summary page
 ]
 
 

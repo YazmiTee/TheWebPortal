@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'store', #registered new store so if I make any changes, it will be updated
+    'basket',
 ]
 
 MIDDLEWARE = [
@@ -121,6 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
 
 
 MEDIA_URL = '/media/' #working lcoally
