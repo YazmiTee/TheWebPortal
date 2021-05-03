@@ -4,7 +4,7 @@
 __Updates:__
 * IMS has been created with Admin page
 * HTML pages have been refactored
-* 
+* Basket app has been created
 
 
 __To do list__
