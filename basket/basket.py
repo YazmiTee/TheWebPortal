@@ -18,13 +18,15 @@ class Basket():
 
     def add(self, product, qty):
         """
-        adding & updating session data 
+        Adding and updating the users basket session data
         """
-        product_id = product.id
+        product_id = str(product.id)
 
-        if product_id not in self.basket :
-            self.basket[product_id] = {'price': str(product.price), 'qty': int(qty)}
-        
+        if product_id in self.basket:
+            self.basket[product_id]['qty'] = qty
+        else:
+            self.basket[product_id] = {'price': str(product.price), 'qty': qty}
+
         self.save()
 
     def __iter__(self):
@@ -51,6 +53,15 @@ class Basket():
         """
         return sum(item['qty'] for item in self.basket.values())  # counts all the values of the key qty
     
+    def update(self, product, qty):
+        """
+        Update values in session data
+        """
+        product_id = str(product)
+        if product_id in self.basket:
+            self.basket[product_id]['qty'] = qty
+        self.save()
+
     def get_total_price(self):
         """
         calculates the total using the item price * qty for each item in the basket
@@ -69,4 +80,7 @@ class Basket():
             self.save()
 
     def save(self):
+        """
+        Saves data to session data table
+        """
         self.session.modified = True
