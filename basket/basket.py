@@ -50,3 +50,9 @@ class Basket():
         Get basket and count the quatity in the basket
         """
         return sum(item['qty'] for item in self.basket.values())  # counts all the values of the key qty
+    
+    def get_total_price(self):
+        """
+        calculates the total using the item price * qty for each item in the basket
+        """
+        return sum(Decimal(item['price']) * item['qty'] for item in self.basket.values())
