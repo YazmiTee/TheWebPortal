@@ -9,14 +9,20 @@ __Latest Updates:__
 
 __To do list__
 [ ] Basket feature
+
     * Add items to basket
     * Delete item from basket
     * Update item in basket
+
+
 [ ] customer log in page
+
     * sign up page
     * Log in page
     *customer profile page
+    
 [ ] Customer wish list
+
     * Add items to wish list
     * Delete item from wish list
     * Update item in list
