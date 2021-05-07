@@ -3,13 +3,13 @@
 
 __Latest Updates:__
 
-* add to basket is now working
-* sessions data is now added to cookies for basket
+* Users are able to add, update and delete items from the basket
+* UI has been refactored with static CSS files to overide the django styles
 
 
 __To do list__
 
-[ ] Basket feature
+[x] Basket feature
 
     * Add items to basket
     * Delete item from basket
