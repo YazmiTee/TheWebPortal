@@ -26,7 +26,7 @@ SECRET_KEY = '4gi@0g#+hqe=sbjw=sq&4(hl6*-*jq4==)$e+=*dguf61fp3u='
 # SECURITY WARNING: don't run with debug turned on in production! allows me to see errors of the website
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['yourdomain.com', '127.0.0.1','localhost']
 
 
 # Application definition
@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'store', #registered new store so if I make any changes, it will be updated
     'basket',
     'account',
+    'payment',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -132,6 +134,9 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/' #working lcoally
 MEDIA_ROOT = os.path.join(BASE_DIR,'media/') # a direct path to the root directory- creates a link for djangoi to access
 
+# basket session id
+BASKET_SESSION_ID = 'basket'
+
 #custom user model
 AUTH_USER_MODEL = 'account.UserBase'
 LOGIN_REDIRECT_URL = '/account/dashboard'
@@ -139,3 +144,9 @@ LOGIN_URL = '/account/login'
 
 #Email setting
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+#Stripe payment
+PUBLISHABLE_KEY = 'pk_test_51Ip9DUJQDQJquU6unu844HlNF25JGAHeKufKikoyoHcJ2NhgTvJcqIdTIylLlQTWCgI4bHgpIarfqmEHpvc3y3BM00qvhKs5ND'
+SECRET_KEY = 'sk_test_51Ip9DUJQDQJquU6ukM0x3CAeMlFF5451jyMQMuG2u3PbxIaJ2I31WR7oCu8W29KEHmHO7jpU12t2lEb4eBZu2xbM00x1bKH2ba'
+STRIPE_ENDPOINT_SECRET = 'whsec_AmsxFdhDZFOW8j4dYXlAS2HIvu0zFGMK'
+#stripe listen --forward-to localhost:8000/payment/webhook/
