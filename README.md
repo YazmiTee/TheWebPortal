@@ -3,9 +3,7 @@
 
 __Latest Updates:__
 
-* Users are able to add, update and delete items from the basket
-* UI has been refactored with static CSS files to overide the django styles
-
+* CMS and pytest installed but CMS not linked to any of the apps and pytest not working
 
 __To do list__
 
